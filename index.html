@@ -7,54 +7,95 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic'>
 <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<!-- <body id="body"> -->
 <!-- partial:index.partial.html -->
-<main class="main-content">
+<body class="main-content" id="body"  >
+    <div class="" id="mousemove">Name</div>
   <section class="slideshow">
     <div class="slideshow-inner">
       <div class="slides">
         <div class="slide is-active ">
-          <div class="slide-content">
+          <div class="slide-content" onmouseover="showCursor()">
+            <div class="prevv" onclick="plusDivs('project1', -1)"></div>
+            <div class="nextt" onclick="plusDivs('project1', 1)" ></div>
             <div class="caption">
-              <div class="text">
-              </div> 
-            </div>
+                <div class="text">
+                </div> 
+              </div>
           </div>
-          <div class="image-container"> 
-            <img src="./images/giedreweb_01.jpg" alt="" class="image" />
+          <div class="image-container container prjct">
+              <div class="projects" id="project1">
+              <div class="imgslide noselect">
+                  <!-- <div class="pagination"></div> -->
+                  <img class="slidess slide-image" alt="Deimante" src="images/giedreweb_01.jpg">
+                  <img class="slidess slide-image" alt="Deimante" src="images/giedreweb_02.jpg">
+                  <img class="slidess slide-image" alt="Scroll Down" src="images/giedreweb_03.jpg">
+                  <div class="img-name"></div>
+              </div> 
+              </div>
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
+            <div class="prevv" onclick="plusDivs('project2', -1)"></div>
+            <div class="nextt" onclick="plusDivs('project2', 1)" ></div>
             <div class="caption">
-              <div class="text">
-              </div> 
-            </div>
+                <div class="text">
+                </div> 
+              </div>
           </div>
-          <div class="image-container">
-            <img src="./images/giedreweb_02.jpg" alt="" class="image" />
+          <div class="image-container container prjct">
+              <div class="projects" id="project2">
+              <div class="imgslide noselect">
+                  <!-- <div class="pagination"></div> -->
+                  <img class="slidess slide-image" alt="Anne" src="images/giedreweb_02.jpg">
+                  <img class="slidess slide-image" alt="Anne" src="images/giedreweb_01.jpg">
+                  <img class="slidess slide-image" alt="Scroll Down" src="images/giedreweb_03.jpg">
+                  <div class="img-name"></div>
+              </div> 
+              </div>
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
+            <div class="prevv" onclick="plusDivs('project3', -1)"></div>
+            <div class="nextt" onclick="plusDivs('project3', 1)" ></div>
             <div class="caption">
-              <div class="text">
-              </div> 
-            </div>
+                <div class="text">
+                </div> 
+              </div>
           </div>
-          <div class="image-container">
-            <img src="./images/giedreweb_03.jpg" alt="" class="image" />
+          <div class="image-container container prjct">
+              <div class="projects" id="project3">
+              <div class="imgslide noselect">
+                  <!-- <div class="pagination"></div> -->
+                  <img class="slidess slide-image" alt="Nora" src="images/giedreweb_03.jpg">
+                  <img class="slidess slide-image" alt="Nora" src="images/giedreweb_02.jpg">
+                  <img class="slidess slide-image" alt="Scroll Down" src="images/giedreweb_01.jpg">
+                  <div class="img-name"></div>
+              </div> 
+              </div>
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
+            <div class="prevv" onclick="plusDivs('project4', -1)"></div>
+            <div class="nextt" onclick="plusDivs('project4', 1)" ></div>
             <div class="caption">
               <div class="text">
               </div> 
             </div>
           </div>
-          <div class="image-container"> 
-            <img src="./images/giedreweb_01.jpg" alt="" class="image" />
+          <div class="image-container container prjct">
+              <div class="projects" id="project4">
+              <div class="imgslide noselect">
+                  <!-- <div class="pagination"></div> -->
+                  <img class="slidess slide-image" alt="Tara" src="images/giedreweb_01.jpg">
+                  <img class="slidess slide-image" alt="Tara" src="images/giedreweb_02.jpg">
+                  <img class="slidess slide-image" alt="Scroll Down" src="images/giedreweb_03.jpg">
+                  <div class="img-name"></div>
+              </div> 
+              </div>
           </div>
         </div>
       </div>
@@ -88,10 +129,11 @@
       </div>
     </div> 
   </section>
-</main>
+<!-- </main> -->
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 <script  src="./script.js"></script>
+<script  src="./custom.js"></script>
 </body>
 </html>

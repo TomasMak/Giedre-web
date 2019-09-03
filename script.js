@@ -9,7 +9,11 @@ function slideshowSwitch(slideshow,index,auto){
   var activeSlide = slides.filter('.is-active');
   var activeSlideImage = activeSlide.find('.image-container');
   var newSlide = slides.eq(index);
-  var newSlideImage = newSlide.find('.image-container');
+  var newSlideImage = newSlide.find('.slidess');
+  console.log(newSlideImage[1].alt)
+  setTimeout(() => {
+    document.getElementById('mousemove').innerText = newSlideImage[1].alt
+  }, 1000);
   var newSlideContent = newSlide.find('.slide-content');
   var newSlideElements=newSlide.find('.caption > *');
   if(newSlide.is(activeSlide))return;
@@ -188,11 +192,11 @@ $('.slideshow').on('mousewheel DOMMouseScroll touchmove',function(){
   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
 });
 $(document).bind('mousewheel DOMMouseScroll', function (event) {
-  console.log(event)
+  // console.log(event)
   event.preventDefault();
   // $slider = $(this);
   var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-  console.log(delta)
+  // console.log(delta)
 })
 
  $('.slideshow .pagination .item').on('click',function(){
