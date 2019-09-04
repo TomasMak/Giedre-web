@@ -10,7 +10,8 @@ function slideshowSwitch(slideshow,index,auto){
   var activeSlideImage = activeSlide.find('.image-container');
   var newSlide = slides.eq(index);
   var newSlideImage = newSlide.find('.slidess');
-  console.log(newSlideImage[1].alt)
+  const test = newSlide.find('.test')
+  console.log(newSlideImage[1], test.alt)
   setTimeout(() => {
     document.getElementById('mousemove').innerText = newSlideImage[1].alt
   }, 1000);
@@ -188,16 +189,16 @@ $(document).ready(function() {
  $('.slideshow .arrows .arrow').on('click',function(){
   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
 });
-$('.slideshow').on('mousewheel DOMMouseScroll touchmove',function(){
-  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
-});
-$(document).bind('mousewheel DOMMouseScroll', function (event) {
-  // console.log(event)
-  event.preventDefault();
-  // $slider = $(this);
-  var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-  // console.log(delta)
-})
+// $('.slideshow').on('mousewheel DOMMouseScroll touchmove',function(){
+//   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
+// });
+// $(document).bind('mousewheel DOMMouseScroll', function (event) {
+//   // console.log(event)
+//   event.preventDefault();
+//   // $slider = $(this);
+//   var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+//   // console.log(delta)
+// })
 
  $('.slideshow .pagination .item').on('click',function(){
   slideshowSwitch($(this).closest('.slideshow'),$(this).index());

@@ -12,11 +12,14 @@ html {
 
 
 /* /////////////// */
+.content-container {
+  width: 100%;
+  height: 100%;
+}
 
 .projects {
-  /* height: 100%; */
-  /* width: 100%; */
-  /* margin-top: 10%; */
+  height: 100%;
+  width: 100%;
 }
 
 .imgslide {
@@ -26,7 +29,7 @@ html {
 }
 
 .imgslide img {
-width: 100%;
+width: 50%;
 height: 100%;
 object-fit: contain
 }
@@ -259,28 +262,31 @@ object-fit: contain
   padding: 20px;
   position: absolute;
   top: 50%;
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 3;
 }
 .slideshow .arrows .prev {
   left: 30px;
 }
-.slideshow .arrows .prev:hover .svg {
-  left: -10px;
-}
 .slideshow .arrows .next {
   right: 30px;
 }
-.slideshow .arrows .next:hover .svg {
-  left: 10px;
-}
+
 .slideshow .arrows .svg {
   position: relative;
   left: 0;
   width: 14px;
   height: 26px;
-  fill: #fff;
+  fill: transparent;
   transition: left 0.2s ease;
+}
+.next:hover .iconNext {
+  fill: black;
+  cursor: none;
+}
+.prev:hover .iconPrev {
+  fill: black;
+  cursor: none;
 }
 #mousemove
 {

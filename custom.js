@@ -17,9 +17,15 @@ showDivs("project4", projectIndexes.project4);
 
 // Image library 
 
-document.getElementById('mousemove').innerText = 'Deimante'
+document.getElementById('mousemove').innerText = 'awda'
 function showCursor(){
-    document.getElementById('mousemove').innerText = 'Deimante'
+    document.getElementById('mousemove').innerText = 'awda'
+}
+function nextArrowCursor(){
+    document.getElementById('mousemove').innerHTML = ''
+}
+function previousArrowCursor(){
+    document.getElementById('mousemove').innerText = ''
 }
 
 function plusDivs(project, n) {
@@ -41,15 +47,16 @@ function showDivs(project, index) {
 	// document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
     // let text = document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
     projectIndexes[project] = index;
-	let elements = document.getElementById(project).querySelector('.imgslide').children;
+    let elements = document.getElementById(project).querySelector('.imgslide').children;
+    let test = document.getElementById(project).querySelector('.imgslide').children[0].children[0].alt
+    // console.log(elements[1].children[0].alt, test)
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
 		if (elements[i].src !== undefined) {
-			imgNames.push(elements[i].alt);
+			imgNames.push(elements[i].children[0].alt);
 			document.getElementById(project).getElementsByClassName("img-name")[0].innerText = imgNames[index - 1];
 		}
     }
-    // console.log(imgNames)
     document.getElementById('mousemove').innerText = imgNames[index - 1]
 	document.getElementById(project).onmouseover = function () { mouseOver() }
 	document.getElementById(project).onclick = function () { mouseOver() }
