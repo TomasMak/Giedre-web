@@ -1,65 +1,17 @@
 * {
-  cursor: none;
+  cursor: none !important;
+  box-sizing: border-box !important;
+  font-family: 'Baskerville Display PT Regular';
+  color: #873739 !important;
 }
 body {
   font: 14px/2 "Open sans",sans-serif;
   letter-spacing: 0.05em;
+  overflow-y: hidden;
 }
 html {
   overflow: hidden;
-  height: 100%;
 }
-
-
-/* /////////////// */
-.content-container {
-  width: 100%;
-  height: 100%;
-}
-
-.projects {
-  height: 100%;
-  width: 100%;
-}
-
-.imgslide {
-	width: 100%;
-  height: 100%;
-  z-index: 1000;
-}
-
-.imgslide img {
-width: 50%;
-height: 100%;
-object-fit: contain
-}
-.prevv {
-  /* cursor: w-resize; */
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  left: 0;
-  top: 0;
-
-  /* padding: 10%  0 10% 10%; */
-  }
-    
-  .nextt {
-  /* cursor: e-resize; */
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  right: 0;
-  top: 0;
-
-  /* padding: 10% 10% 10% 0 */
-  }
-
-  .img-name {
-    visibility: hidden
-  }
-
-/* /////////////// */
 
 .btn {
   display: inline-block;
@@ -113,7 +65,7 @@ object-fit: contain
 
 .slideshow {
   overflow: hidden;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100vh;
   z-index: 1;
@@ -220,7 +172,7 @@ object-fit: contain
   left: 0;
   width: 100%;
   height: 12px;
-  cursor: default;
+  /* cursor: default; */
   z-index: 2;
   text-align: center;
 }
@@ -277,7 +229,7 @@ object-fit: contain
   left: 0;
   width: 14px;
   height: 26px;
-  fill: transparent;
+  /* fill: transparent; */
   transition: left 0.2s ease;
 }
 .next:hover .iconNext {
@@ -288,6 +240,9 @@ object-fit: contain
   fill: black;
   cursor: none;
 }
+
+/* /////////////// */
+
 #mousemove
 {
   position: fixed;
@@ -296,9 +251,170 @@ object-fit: contain
   background-color: transparent;
   /* width: 180px; */
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   z-index: 30000;
   pointer-events: none;
   margin-top: -12px;
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+}
+
+.imgslide {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #fff;
+}
+.prevv {
+  /* cursor: w-resize; */
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  top: 0;
+  
+  /* padding: 10%  0 10% 10%; */
+}
+
+.nextt {
+  /* cursor: e-resize; */
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  
+  /* padding: 10% 10% 10% 0 */
+}
+
+.img-name {
+  visibility: hidden
+}
+#header {
+  margin-left: 15px;
+  margin-top: 5px;
+  position: absolute;
+  z-index: 3;
+  font-size: 18px;
+}
+.content-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* white-space: nowrap; */
+}
+.style-1 {
+  height: 100%;
+  width: 35%;
+  display: inline-block;
+}
+.style-1-right {
+    height: 100%;
+    width: 60%;
+    display: inline-block;
+    overflow: hidden !important;
+    vertical-align: auto
+  }
+
+  .style-1 img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain
+    }
+  .style-1-right img {
+    max-width: 60%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+    margin: 50px 10px 10px 200px;
+    }
+
+#style-2-right {
+  width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;
+    object-fit: cover;
+    margin: 80px 10px 10px 130px;
+}
+
+/* /////////////// */
+/* Small devices */
+@media only screen and (max-width: 992px) {
+img {
+  object-fit: contain !important
+}
+}
+/* laptops */
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (max-width: 1095px) {
+  img {
+    object-fit: contain !important;
+    height: auto;
+    width: auto;
+  }
+  .content-container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    /* white-space: nowrap; */
+    /* margin-top: 300px; */
+  }
+    .slideshow {
+      /* height: 50%; */
+    }
+    /* #style-2-right {
+      width: auto;
+        max-width: 70%;
+        height: auto;
+        max-height: 80%;
+        object-fit: cover;
+        margin: 190px 30px 10px 70px;
+    } */
+    .style-1 {
+      width: 100%;
+      height: 50%;
+      display: inline-block;
+    }
+    .style-1 img {
+      /* width: 100%; */
+      height: 90%;
+      object-fit: contain;
+      display: block;
+      margin: 10px auto 10px auto;
+      }
+      .style-1-right {
+        height: 50vh;
+        width: 100%;
+        /* overflow: hidden !important; */
+      }
+      .style-1-right img {
+        height: 100%;
+        /* width: 100%; */
+        object-fit: contain;
+        display: block;
+        margin: 0px auto 20px auto;
+        }
+      #header {
+        margin-left: 15px;
+        margin-top: 5px;
+        position: absolute;
+        z-index: 3;
+        font-size: 38px;
+      }
+      #mousemove {
+        font-size: 38px;
+      }
+
+}
+/* Large laptops and dekstops */
+@media only screen and (min-width: 1400px) {
+
 }

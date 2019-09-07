@@ -17,24 +17,24 @@ showDivs("project4", projectIndexes.project4);
 
 // Image library 
 
-document.getElementById('mousemove').innerText = 'awda'
-function showCursor(){
-    document.getElementById('mousemove').innerText = 'awda'
-}
+document.getElementById('mousemove').innerText = 'Deimante'
+// function showCursor(){
+//     // document.getElementById('mousemove').innerText = 'awda'
+// }
 function nextArrowCursor(){
-    document.getElementById('mousemove').innerHTML = ''
+    // document.getElementById('mousemove').innerHTML = ''
 }
 function previousArrowCursor(){
-    document.getElementById('mousemove').innerText = ''
+    // document.getElementById('mousemove').innerText = ''
 }
 
 function plusDivs(project, n) {
 	showDivs(project, projectIndexes[project] += n);
 }
-console.log(window)
+
 function showDivs(project, index) {
 	let i;
-	let x = document.getElementById(project).getElementsByClassName("slidess");
+    let x = document.getElementById(project).getElementsByClassName("slidess");
 	// if (index == x.length) {
 	// 	document.getElementById("pagination-main").style.color = 'red'
 	// }
@@ -48,15 +48,15 @@ function showDivs(project, index) {
     // let text = document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
     projectIndexes[project] = index;
     let elements = document.getElementById(project).querySelector('.imgslide').children;
-    let test = document.getElementById(project).querySelector('.imgslide').children[0].children[0].alt
-    // console.log(elements[1].children[0].alt, test)
+    console.log(elements[0].children[0].children[0].alt)
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
-		if (elements[i].src !== undefined) {
-			imgNames.push(elements[i].children[0].alt);
-			document.getElementById(project).getElementsByClassName("img-name")[0].innerText = imgNames[index - 1];
-		}
+		// if (elements[i].src !== undefined) {
+			imgNames.push(elements[i].children[0].children[0].alt);
+			// document.getElementById(project).getElementsByClassName("img-name")[0].innerText = imgNames[index - 1];
+		// }
     }
+    // console.log( imgNames[0])
     document.getElementById('mousemove').innerText = imgNames[index - 1]
 	document.getElementById(project).onmouseover = function () { mouseOver() }
 	document.getElementById(project).onclick = function () { mouseOver() }
