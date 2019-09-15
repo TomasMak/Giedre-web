@@ -6,12 +6,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic'>
 <link rel="stylesheet" href="./style.css">
+<script src="https://kit.fontawesome.com/ce055af779.js"></script>
 </head>
 <!-- partial:index.partial.html -->
 <body class="main-content" id="body"  >
     <div class="" id="mousemove">Name</div>
-    <p id="header">Giedre Malinauskaite</p>
+    <a onclick="openNav()"><p id="header">Giedre Malinauskaite</p></a>
   <section class="slideshow">
+		<div id="myNav" class="overlay" onclick="closeNav()" onmouseover="hoverTest()">
+				<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+				<div class="overlay-content pagination">
+				  <div class="item is-active" href="Project 1"></div>
+				  <div class="item" href="Project 2"></div>
+				  <div class="item" href="Project 3"></div>
+				  <div class="item" href="Project 4"></div>
+				</div>
+				<!-- <div class="pagination">
+						<div class="item is-active"> 
+						  <span class="icon">1</span>
+						</div>
+						<div class="item">
+						  <span class="icon">2</span>
+						</div>
+						<div class="item">
+						  <span class="icon">3</span>
+						</div>
+						<div class="item">
+						  <span class="icon">4</span>
+						</div>
+					  </div> -->
+			  </div>
     <div class="slideshow-inner">
       <div class="slides">
         <div class="slide is-active ">
@@ -152,20 +176,7 @@
             </div>
       
       </div>
-      <!-- <div class="pagination">
-        <div class="item is-active"> 
-          <span class="icon">1</span>
-        </div>
-        <div class="item">
-          <span class="icon">2</span>
-        </div>
-        <div class="item">
-          <span class="icon">3</span>
-        </div>
-        <div class="item">
-          <span class="icon">4</span>
-        </div>
-      </div> -->
+ 
       <div class="arrows">
         <div class="arrow prev" onmouseover="previousArrowCursor()">
           <span class="svg svg-arrow-left">

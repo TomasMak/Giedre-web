@@ -16,13 +16,17 @@ showDivs("project4", projectIndexes.project4);
 // showDivs("project7", projectIndexes.project7);
 
 // Image library 
+hoverTest = () => {
+	document.getElementById('mousemove').innerHTML = '<i class="fas fa-times"></i>'
+	document.getElementById('mousemove').style.visibility = 'visible'
 
+}
 document.getElementById('mousemove').innerText = 'Deimante'
 // function showCursor(){
 //     // document.getElementById('mousemove').innerText = 'awda'
 // }
 function nextArrowCursor(){
-    // document.getElementById('mousemove').innerHTML = ''
+    // document.getElementById('mousemove').innerHTML = '<i class="fas fa-arrow-right"></i>'
 }
 function previousArrowCursor(){
     // document.getElementById('mousemove').innerText = ''
@@ -35,9 +39,6 @@ function plusDivs(project, n) {
 function showDivs(project, index) {
 	let i;
     let x = document.getElementById(project).getElementsByClassName("slidess");
-	// if (index == x.length) {
-	// 	document.getElementById("pagination-main").style.color = 'red'
-	// }
 	if (index > x.length) { index = 1 }
 	if (index < 1) { index = x.length }
 	for (i = 0; i < x.length; i++) {
@@ -48,7 +49,6 @@ function showDivs(project, index) {
     // let text = document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
     projectIndexes[project] = index;
     let elements = document.getElementById(project).querySelector('.imgslide').children;
-    console.log(elements[0].children[0].children[0].alt)
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
 		// if (elements[i].src !== undefined) {
@@ -89,3 +89,18 @@ mydiv.addEventListener('mousemove', function (event) {
 	mycanvas.style.left = mousePos.x + "px";
 	// console.log(mycanvas.style.top);
 }, false);
+
+// Overlay page
+
+function openNav() {
+	document.getElementById("myNav").style.display = "block";
+	document.getElementById("mousemove").style.visibility = 'hidden'
+	document.getElementById("body").style.cursor = 'pointer'
+
+  }
+  
+  function closeNav() {
+	document.getElementById("myNav").style.display = "none";
+	document.getElementById("mousemove").style.visibility = 'visible'
+
+  }
