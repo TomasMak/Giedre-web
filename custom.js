@@ -16,20 +16,17 @@ showDivs("project4", projectIndexes.project4);
 // showDivs("project7", projectIndexes.project7);
 
 // Image library 
-hoverTest = () => {
-	document.getElementById('mousemove').innerHTML = '<i class="fas fa-times"></i>'
-	document.getElementById('mousemove').style.visibility = 'visible'
+const customCursor = document.getElementById('mousemove')
+const haderName = document.getElementById('header')
+customCursor.innerText = 'Deimante'
 
+haderName.onmouseover = 
+ hideMouseMove = () => {
+	customCursor.style.visibility = 'hidden'
 }
-document.getElementById('mousemove').innerText = 'Deimante'
-// function showCursor(){
-//     // document.getElementById('mousemove').innerText = 'awda'
-// }
-function nextArrowCursor(){
-    // document.getElementById('mousemove').innerHTML = '<i class="fas fa-arrow-right"></i>'
-}
-function previousArrowCursor(){
-    // document.getElementById('mousemove').innerText = ''
+haderName.onmouseout = 
+showMouseMove = () => {
+    customCursor.style.visibility = 'visible'
 }
 
 function plusDivs(project, n) {
@@ -94,13 +91,14 @@ mydiv.addEventListener('mousemove', function (event) {
 
 function openNav() {
 	document.getElementById("myNav").style.display = "block";
-	document.getElementById("mousemove").style.visibility = 'hidden'
-	document.getElementById("body").style.cursor = 'pointer'
+	document.getElementById('mousemove').style.display = 'none'
+	document.getElementById("body").style.cursor = 'default'
 
   }
   
   function closeNav() {
 	document.getElementById("myNav").style.display = "none";
-	document.getElementById("mousemove").style.visibility = 'visible'
+	document.getElementById('mousemove').style.display = 'block'
+	document.getElementById("body").style.cursor = 'none'
 
   }
