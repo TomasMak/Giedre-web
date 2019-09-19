@@ -217,32 +217,35 @@ body {
   padding: 20px;
   position: absolute;
   top: 50%;
-  /* cursor: pointer; */
-  z-index: 3;
+  
+  width: 60px;
+  height: 100px;
 }
 .slideshow .arrows .prev {
   left: 30px;
+  z-index: 5;
 }
 .slideshow .arrows .next {
   right: 30px;
+  z-index: 5;
+}
+.iconPrev, .iconNext {
+  fill: transparent
 }
 
-.slideshow .arrows .svg {
-  position: relative;
-  left: 0;
-  width: 14px;
-  height: 26px;
-  /* fill: transparent; */
-  transition: left 0.2s ease;
+.iconNext:hover {
+  cursor: e-resize
 }
-.next:hover .iconNext {
-  fill: black;
-  cursor: none;
+#nextArrow:hover {
+  cursor: e-resize
 }
-.prev:hover .iconPrev {
-  fill: black;
-  cursor: none;
+#prevArrow:hover {
+  cursor: w-resize
 }
+.iconPrev:hover {
+  cursor: w-resize
+}
+
 
 /* /////////////// */
 
@@ -280,8 +283,6 @@ body {
   width: 50%;
   left: 0;
   top: 0;
-  
-  /* padding: 10%  0 10% 10%; */
 }
 
 .nextt {
@@ -291,8 +292,6 @@ body {
   width: 50%;
   right: 0;
   top: 0;
-  
-  /* padding: 10% 10% 10% 0 */
 }
 
 .img-name {
