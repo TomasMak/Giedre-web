@@ -75,32 +75,32 @@ mydiv.addEventListener('mousemove', function (event) {
 
 // Overlay page
 
-function openNav() {
-	document.getElementById("myNav").style.display = "block";
-	document.getElementById('mousemove').style.display = 'none'
-	document.getElementById("body").style.cursor = 'default'
+const customCursor = document.getElementById('mousemove')
+const headerName = document.getElementById('header')
+const arrowNext = document.getElementById('nextArrow')
+const arrowPrev = document.getElementById('prevArrow')
+const overlayPage = document.getElementById("myNav")
+const mainBody = document.getElementById("body")
 
+function openNav() {
+	overlayPage.style.display = "block"
+	customCursor.style.display = 'none'
+	mainBody.style.cursor = 'default'
 }
 
 function closeNav() {
-	document.getElementById("myNav").style.display = "none";
-	document.getElementById('mousemove').style.display = 'block'
-	document.getElementById("body").style.cursor = 'none'
-
+	overlayPage.style.display = "none"
+	customCursor.style.display = 'block'
+	mainBody.style.cursor = 'none'
 }
 
 // Image library 
-const customCursor = document.getElementById('mousemove')
-const haderName = document.getElementById('header')
-const arrowNext = document.getElementById('nextArrow')
-const arrowPrev = document.getElementById('prevArrow')
-customCursor.innerText = 'Deimante'
 
-haderName.onmouseover =
+headerName.onmouseover =
 	hideMouseMove = () => {
 		customCursor.style.visibility = 'hidden'
 	}
-haderName.onmouseout =
+headerName.onmouseout =
 	showMouseMove = () => {
 		customCursor.style.visibility = 'visible'
 	}

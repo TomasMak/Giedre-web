@@ -177,13 +177,9 @@ body {
 }
 .slideshow .pagination .item {
   display: block;
-  /* padding: 15px 5px; */
   position: relative;
   width: 100%;
   height: 32px;
-  /* cursor: pointer; */
-  /* text-indent: -999em; */
-  z-index: 1;
 }
 .slideshow .pagination .item + .page {
   margin-left: -2px;
@@ -196,6 +192,7 @@ body {
   width: 206px;
   height: 30px;
   color: #afafaf;
+  cursor: crosshair;
 
   /* background: rgba(255, 255, 255, 0.5); */
   /* transition: background 0.2s ease; */
@@ -204,6 +201,7 @@ body {
   width: 0;
   background: #fff;
   z-index: 2;
+  cursor: crosshair;
   /* transition: width 0.2s ease; */
 }
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
@@ -211,7 +209,9 @@ body {
   font-weight: bold;
   cursor: crosshair;
 }
-
+.item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
+  cursor: crosshair;
+}
 .slideshow .arrows .arrow {
   margin: -33px 0 0;
   padding: 20px;
@@ -230,7 +230,8 @@ body {
   z-index: 5;
 }
 .iconPrev, .iconNext {
-  fill: transparent
+  height: 70px;
+  width: 50px;
 }
 
 .iconNext:hover {
@@ -413,13 +414,16 @@ body {
 /* /////////////// */
 /* Small devices */
 @media only screen and (max-width: 992px) {
-img {
-  object-fit: contain !important
-}
+  img {
+    object-fit: contain !important
+  }
+  
 }
 /* laptops */
 @media only screen and (min-width: 992px) {
-
+  .iconPrev, .iconNext {
+    fill: transparent
+  }
 }
 
 @media only screen and (max-width: 1095px) {
