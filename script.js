@@ -189,7 +189,7 @@ $(document).ready(function() {
    console.log($(this).closest('.slideshow'), $(this).hasClass('prev'))
   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
 });
-$('.slide').on('mousewheel DOMMouseScroll',function(event){
+$('.slide').on('mousewheel DOMMouseScroll touchmove',function(event){
   var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
   slideshowNext($(this).closest('.slideshow'), delta > 0);
 });
