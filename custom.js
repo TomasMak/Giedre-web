@@ -5,7 +5,7 @@ let projectIndexes = {
 	project4: 1,
 	project5: 1,
 	project6: 1,
-	// project7: 1,
+	project7: 1,
 }
 showDivs("project1", projectIndexes.project1);
 showDivs("project2", projectIndexes.project2);
@@ -13,7 +13,7 @@ showDivs("project3", projectIndexes.project3);
 showDivs("project4", projectIndexes.project4);
 showDivs("project5", projectIndexes.project5);
 showDivs("project6", projectIndexes.project6);
-// showDivs("project7", projectIndexes.project7);
+showDivs("project7", projectIndexes.project7);
 
 function plusDivs(project, n) {
 	showDivs(project, projectIndexes[project] += n);
