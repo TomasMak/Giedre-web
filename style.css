@@ -315,6 +315,7 @@ body {
   /* white-space: nowrap; */
 }
 /* ------------------------------ Layout - 1 -------------------------  */
+/* Left side: full size image, right side: smaller floating image */
 .style-1 {
   height: 100%;
   width: 40%;
@@ -324,6 +325,9 @@ body {
   height: 100%;
   width: 60%;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .style-1-img {
@@ -336,14 +340,18 @@ body {
   height: auto;
   max-height: 80%;
   object-fit: contain;
-  margin: 60px 10px 10px 250px;
+  margin-left: 150px;
   }
 
   /* ------------------------------ Layout - 2 -------------------------  */
+  /* Left side: smaller floating image, right side: full size image  */
 .style-2 {
   height: 100%;
   width: 60%;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .style-2-right {
   height: 100%;
@@ -356,7 +364,7 @@ body {
   height: auto;
   max-height: 80%;
   object-fit: contain;
-  margin: 60px 10px 10px 150px;
+  margin-right: 150px;
   
   }
 .style-2-right-img {
@@ -365,6 +373,7 @@ body {
   object-fit: cover;
   }
   /* ------------------------------ Layout - 3 -------------------------  */
+  /* Row of 3 same size images */
 
   .style-3-left {
     height: 100%;
@@ -392,6 +401,7 @@ body {
     max-width: 80%;
   }
   /* ------------------------------ Layout - 4 -------------------------  */
+  /* 1 large horizontal image on the right */
   .style-4 {
     height: 100%;
     width: 100%;
@@ -403,6 +413,38 @@ body {
   .style-4 img {
     object-fit: contain;
     max-height: 80%;
+    max-width: 80%;
+  }
+  /* ------------------------------ Layout - 5 -------------------------  */
+  /* Row of 2 same size images floating to the right */
+
+  .style-5 {
+    height: 100%;
+    width: 40%;
+    float: left;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .style-5-right {
+    height: 100%;
+    width: 40%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .style-5-img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 80%;
+  }
+
+  .style-5-right-img {
+    object-fit: contain;
+    max-height: 100%;
     max-width: 80%;
   }
 
