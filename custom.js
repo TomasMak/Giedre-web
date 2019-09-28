@@ -82,6 +82,8 @@ const arrowPrev = document.getElementById('prevArrow')
 const overlayPage = document.getElementById("myNav")
 const mainBody = document.getElementById("body")
 
+customCursor.innerText = 'Lou&Charlene'
+
 function openNav() {
 	overlayPage.style.display = "block"
 	customCursor.style.display = 'none'
