@@ -232,8 +232,8 @@ body {
 .iconPrev, .iconNext {
   height: 70px;
   width: 50px;
+  fill: transparent
 }
-
 .iconNext:hover {
   cursor: e-resize
 }
@@ -338,8 +338,12 @@ body {
   width: 50%;
   height: auto;
   object-fit: contain;
-  margin-left: 150px;
+  margin-left: 195px;
   }
+.style-1-right-double-img {
+  width: 33%;
+  margin-left: 40px;
+}
 
   /* ------------------------------ Layout - 2 -------------------------  */
   /* Left side: smaller floating image, right side: full size image  */
@@ -458,9 +462,7 @@ body {
 }
 /* laptops */
 @media only screen and (min-width: 992px) {
-  .iconPrev, .iconNext {
-    fill: transparent
-  }
+
 }
 
 @media only screen and (max-width: 1095px) {
