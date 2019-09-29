@@ -2,15 +2,17 @@
   cursor: none;
   box-sizing: border-box !important;
   font-family: 'Baskerville Display PT Regular';
-  color: #873739 ;
+  color: #873739;
 }
+
 html {
   overflow: hidden;
 }
+
 body {
-  font: 14px/2 "Open sans",sans-serif;
+  font: 14px/2 "Open sans", sans-serif;
   letter-spacing: 0.05em;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0;
 }
@@ -30,6 +32,7 @@ body {
   text-transform: uppercase;
   transition: color 0.1s linear 0.05s;
 }
+
 .btn::before {
   content: "";
   display: block;
@@ -43,23 +46,28 @@ body {
   opacity: 0;
   transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
 }
+
 .btn::after {
   transition: border 0.1s linear 0.05s;
 }
+
 .btn .btn-inner {
   position: relative;
   z-index: 2;
 }
+
 .btn:hover {
   color: #373737;
   transition: color 0.1s linear 0s;
 }
+
 .btn:hover::before {
   top: 0;
   height: 100%;
   opacity: 1;
   transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
 }
+
 .btn:hover::after {
   border-color: #373737;
   transition: border 0.1s linear 0s;
@@ -72,6 +80,7 @@ body {
   height: 100%;
   z-index: 1;
 }
+
 .slideshow .slideshow-inner {
   position: absolute;
   top: 0;
@@ -79,6 +88,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .slideshow .slides {
   position: absolute;
   top: 0;
@@ -87,6 +97,7 @@ body {
   height: 100%;
   z-index: 1;
 }
+
 .slideshow .slide {
   display: none;
   overflow: hidden;
@@ -99,15 +110,19 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .slideshow .slide.is-active {
   display: block;
 }
+
 .slideshow .slide.is-loaded {
   opacity: 1;
 }
+
 .slideshow .slide .caption {
   padding: 0 100px;
 }
+
 .slideshow .slide .image-container {
   position: absolute;
   top: 0;
@@ -119,6 +134,7 @@ body {
   background-size: cover;
   image-rendering: optimizeQuality;
 }
+
 .slideshow .slide .image-container::before {
   content: "";
   display: block;
@@ -129,12 +145,14 @@ body {
   height: 100%;
   /* background: rgba(0, 0, 0, 0.5); */
 }
+
 .slideshow .slide .image {
   width: 100%;
   width: 100%;
   object-fit: contain;
   height: 100%;
 }
+
 .slideshow .slide-content {
   position: absolute;
   top: 0;
@@ -148,6 +166,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .slideshow .slide .title {
   margin: 0 auto 15px;
   max-width: 1000px;
@@ -155,16 +174,19 @@ body {
   letter-spacing: 0.35em;
   text-transform: uppercase;
 }
+
 .slideshow .slide .text {
   margin: 0 auto;
   max-width: 1000px;
   font-size: 18px;
   line-height: 1.4;
 }
+
 .slideshow .slide .btn {
   margin: 15px 0 0;
   border-color: #fff;
 }
+
 .slideshow .pagination {
   position: absolute;
   bottom: 35px;
@@ -175,15 +197,19 @@ body {
   /* z-index: 2; */
   text-align: center;
 }
+
 .slideshow .pagination .item {
   display: block;
   position: relative;
   width: 100%;
   height: 32px;
+  font-size: 24px
 }
-.slideshow .pagination .item + .page {
+
+.slideshow .pagination .item+.page {
   margin-left: -2px;
 }
+
 .slideshow .pagination .item::before {
   content: "" attr(href) "";
   display: block;
@@ -193,10 +219,10 @@ body {
   height: 30px;
   color: #afafaf;
   cursor: crosshair;
-
   /* background: rgba(255, 255, 255, 0.5); */
   /* transition: background 0.2s ease; */
 }
+
 .slideshow .pagination .item::after {
   width: 0;
   background: #fff;
@@ -204,54 +230,61 @@ body {
   cursor: crosshair;
   /* transition: width 0.2s ease; */
 }
+
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
   color: #f1f1f1;
   font-weight: bold;
   cursor: crosshair;
 }
+
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
   cursor: crosshair;
 }
+
 .slideshow .arrows .arrow {
   margin: -33px 0 0;
   padding: 20px;
   position: absolute;
   top: 50%;
-  
   width: 60px;
   height: 100px;
 }
+
 .slideshow .arrows .prev {
   left: 30px;
   z-index: 5;
 }
+
 .slideshow .arrows .next {
   right: 30px;
   z-index: 5;
 }
+
 .iconPrev, .iconNext {
   height: 70px;
   width: 50px;
   fill: transparent
 }
+
 .iconNext:hover {
   cursor: e-resize
 }
+
 #nextArrow:hover {
   cursor: e-resize
 }
+
 #prevArrow:hover {
   cursor: w-resize
 }
+
 .iconPrev:hover {
   cursor: w-resize
 }
 
-
 /* /////////////// */
 
-#mousemove
-{
+#mousemove {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -264,6 +297,7 @@ body {
   pointer-events: none;
   margin-top: -27px;
   margin-left: -12px;
+  white-space: nowrap;
 }
 
 .projects {
@@ -277,6 +311,7 @@ body {
   z-index: 1000;
   background: #fff;
 }
+
 .prevv {
   /* cursor: w-resize; */
   position: absolute;
@@ -298,28 +333,35 @@ body {
 .img-name {
   visibility: hidden
 }
+
 #header {
   margin-left: 15px;
   margin-top: 5px;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   font-size: 18px;
 }
+
 #header:hover {
   cursor: crosshair
 }
+
 .content-container {
   width: 100%;
   height: 100%;
   background: #fff;
 }
+
 /* ------------------------------ Layout - 1 -------------------------  */
+
 /* Left side: full size image, right side: smaller floating image */
+
 .style-1 {
   height: 100%;
   width: 40%;
   float: left;
 }
+
 .style-1-right {
   height: 100%;
   width: 60%;
@@ -333,20 +375,24 @@ body {
   /* width: 100%; */
   height: 100%;
   object-fit: contain;
-  }
+}
+
 .style-1-right-img {
   width: 50%;
   height: auto;
   object-fit: contain;
   margin-left: 195px;
-  }
+}
+
 .style-1-right-double-img {
   width: 33%;
   margin-left: 40px;
 }
 
-  /* ------------------------------ Layout - 2 -------------------------  */
-  /* Left side: smaller floating image, right side: full size image  */
+/* ------------------------------ Layout - 2 -------------------------  */
+
+/* Left side: smaller floating image, right side: full size image  */
+
 .style-2 {
   height: 100%;
   width: 60%;
@@ -355,6 +401,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .style-2-right {
   height: 100%;
   width: 40%;
@@ -366,104 +413,117 @@ body {
   height: auto;
   object-fit: contain;
   margin-right: 150px;
-  
-  }
+}
+
 .style-2-right-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  }
-  /* ------------------------------ Layout - 3 -------------------------  */
-  /* Row of 3 same size images */
+}
 
-  .style-3-left {
-    height: 100%;
-    width: 31.3333%;
-    float: left;
-    margin-left: 3%;
-  }
-  .style-3-middle {
-    height: 100%;
-    width: 31.3333%;
-    float: left;
-  }
-  .style-3-right {
-    height: 100%;
-    width: 31.3333%;
-    float: left;
-    margin-right: 3%;
-  }
-  .style-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .style-3 img {
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 75%;
-  }
-  /* ------------------------------ Layout - 4 -------------------------  */
-  /* 1 large horizontal image on the right */
-  .style-4 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 150px;
-  }
-  .style-4 img {
-    object-fit: contain;
-    max-height: 80%;
-    max-width: 80%;
-  }
-  /* ------------------------------ Layout - 5 -------------------------  */
-  /* Row of 2 same size images floating to the right */
+/* ------------------------------ Layout - 3 -------------------------  */
 
-  .style-5 {
-    height: 100%;
-    width: 40%;
-    float: left;
-    margin-left: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .style-5-right {
-    height: 100%;
-    width: 40%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* Row of 3 same size images */
 
-  .style-5-img {
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 80%;
-  }
+.style-3-left {
+  height: 100%;
+  width: 31.3333%;
+  float: left;
+  margin-left: 3%;
+}
 
-  .style-5-right-img {
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 80%;
-  }
+.style-3-middle {
+  height: 100%;
+  width: 31.3333%;
+  float: left;
+}
 
+.style-3-right {
+  height: 100%;
+  width: 31.3333%;
+  float: left;
+  margin-right: 3%;
+}
+
+.style-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.style-3 img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 75%;
+}
+
+/* ------------------------------ Layout - 4 -------------------------  */
+
+/* 1 large horizontal image on the right */
+
+.style-4 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.style-4 img {
+  object-fit: contain;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+/* ------------------------------ Layout - 5 -------------------------  */
+
+/* Row of 2 same size images floating to the right */
+
+.style-5 {
+  height: 100%;
+  width: 40%;
+  float: left;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.style-5-right {
+  height: 100%;
+  width: 40%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.style-5-img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 80%;
+}
+
+.style-5-right-img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 80%;
+}
 
 /* /////////////// */
+
 /* Small devices */
+
 @media only screen and (max-width: 992px) {
   img {
     object-fit: contain !important
   }
-  
 }
-/* laptops */
-@media only screen and (min-width: 992px) {
 
-}
+/* laptops */
+
+@media only screen and (min-width: 992px) {}
 
 @media only screen and (max-width: 1095px) {
   img {
@@ -493,49 +553,55 @@ body {
     object-fit: contain;
     display: block;
     margin: 10px auto;
-    }
-    .style-5 {
-      margin-left: 0;
-    }
-    .style-3 {
-      height: 33.3%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .style-3 img {
-      object-fit: contain;
-      max-height: 90%;
-      max-width: 80%;
-    }
-    .style-3-left {
-      margin-left: 0%;
-    }
-    .style-3-right {
-      margin-left: 0%;
-    }
-  
-
-    #header {
-      margin-left: 15px;
-      margin-top: 5px;
-      position: absolute;
-      z-index: 3;
-      font-size: 38px;
-    }
-    #mousemove {
-      font-size: 38px;
-    }
-
+  }
+  .style-5 {
+    margin-left: 0;
+  }
+  .style-3 {
+    height: 33.3%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .style-3 img {
+    object-fit: contain;
+    max-height: 90%;
+    max-width: 80%;
+  }
+  .style-3-left {
+    margin-left: 0%;
+  }
+  .style-3-right {
+    margin-left: 0%;
+  }
+  .style-4 {
+    margin-left: 0px;
+  }
+  .style-4 img {
+    object-fit: contain;
+    max-height: 80%;
+    max-width: 90%;
+  }
+  #header {
+    margin-left: 15px;
+    margin-top: 5px;
+    position: fixed;
+    z-index: 3;
+    font-size: 48px;
+  }
+  #mousemove {
+    font-size: 48px;
+  }
+  .slideshow .pagination .item {
+    font-size: 44px;
+    padding: 40px;
+  }
 }
+
 /* Large laptops and dekstops */
-@media only screen and (min-width: 1400px) {
 
-}
-
-
-
+@media only screen and (min-width: 1400px) {}
 
 /* Overlay page */
 
@@ -547,9 +613,10 @@ body {
   z-index: 4;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
+
 .overlay, .overlay a:hover {
   cursor: crosshair !important;
 }
@@ -572,7 +639,7 @@ body {
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1 ;
+  color: #f1f1f1;
   /* cursor: crosshair !important */
 }
 
