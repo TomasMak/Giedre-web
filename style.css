@@ -204,8 +204,8 @@ body {
   display: block;
   position: relative;
   width: 100%;
-  height: 32px;
-  font-size: 18px
+  font-size: 18px;
+  white-space: normal
 }
 
 .slideshow .pagination .item+.page {
@@ -609,9 +609,15 @@ body {
   #mousemove {
     font-size: 48px;
   }
+  .overlay {
+    overflow: scroll;
+  }
+  .pagination {
+    padding-top: 200px !important;
+  }
   .slideshow .pagination .item {
-    font-size: 44px;
-    padding: 40px;
+    font-size: 40px;
+    padding: 10px 0px;
   }
 }
 
