@@ -1,8 +1,13 @@
+@font-face {
+  font-family: externalFont;
+  src: url(/font/ParaSupreme-RegularNormal.otf);
+}
 * {
   cursor: none;
   box-sizing: border-box !important;
-  font-family: 'Baskerville Display PT Regular';
-  color: #873739;
+  font: 14px/2 externalFont, sans-serif;
+  font-weight: 400;
+  color: #a4363a;
 }
 
 html {
@@ -10,7 +15,6 @@ html {
 }
 
 body {
-  font: 14px/2 "Open sans", sans-serif;
   letter-spacing: 0.05em;
   height: 100%;
   width: 100%;
@@ -203,7 +207,7 @@ body {
   position: relative;
   width: 100%;
   height: 32px;
-  font-size: 24px
+  font-size: 18px
 }
 
 .slideshow .pagination .item+.page {
@@ -217,7 +221,7 @@ body {
   left: 10px;
   width: 206px;
   height: 30px;
-  color: #afafaf;
+  color: #a4363a;
   cursor: crosshair;
   /* background: rgba(255, 255, 255, 0.5); */
   /* transition: background 0.2s ease; */
@@ -232,8 +236,8 @@ body {
 }
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
-  color: #f1f1f1;
-  font-weight: bold;
+  color: #a4363a;
+  text-decoration: underline;
   cursor: crosshair;
 }
 
@@ -290,7 +294,7 @@ body {
   left: 50%;
   background-color: transparent;
   /* width: 180px; */
-  color: #873739;
+  color: #a4363a;
   font-size: 18px;
   font-weight: 400;
   z-index: 3000;
@@ -542,17 +546,28 @@ body {
     width: 100%;
     height: 50%;
     display: inline-block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .style-1-right, .style-2-right, .style-5-right {
     height: 50%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .style-1-img, .style-1-right-img, .style-2-img, .style-2-right-img, .style-5-img, .style-5-right-img {
     width: 80%;
-    max-height: 90%;
-    object-fit: contain;
-    display: block;
-    margin: 10px auto;
+    height: 90%;
+    object-fit: cover;
+    margin: 0px auto;
+  }
+  .style-1-right-double-img {
+    width: 33%;
+    margin: 0px 30px;
+    /* margin: auto; */
   }
   .style-5 {
     margin-left: 0;
@@ -560,9 +575,6 @@ body {
   .style-3 {
     height: 33.3%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .style-3 img {
     object-fit: contain;
@@ -613,8 +625,9 @@ body {
   z-index: 4;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #f2f2f2;
+  /* background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); */
 }
 
 .overlay, .overlay a:hover {
@@ -633,13 +646,13 @@ body {
   padding: 8px;
   text-decoration: none;
   font-size: 16px;
-  color: #f1f1f1;
+  color: #a4363a;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: #a4363a;
   /* cursor: crosshair !important */
 }
 
