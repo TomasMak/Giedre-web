@@ -193,13 +193,11 @@ body {
 
 .slideshow .pagination {
   position: absolute;
-  bottom: 35px;
   left: 0;
   width: 100%;
-  height: 120px;
-  /* cursor: default; */
-  /* z-index: 2; */
-  text-align: center;
+  height: 100%;
+  text-align: left;
+  padding: 60px 15px 15px 15px;
 }
 
 .slideshow .pagination .item {
@@ -215,14 +213,15 @@ body {
 }
 
 .slideshow .pagination .item::before {
-  content: "" attr(href) "";
+  /* content: "" attr(href) ""; */
   display: block;
   position: absolute;
   left: 10px;
-  width: 206px;
+  width: 100%;
   height: 30px;
   color: #a4363a;
   cursor: crosshair;
+  text-align: left;
   /* background: rgba(255, 255, 255, 0.5); */
   /* transition: background 0.2s ease; */
 }
@@ -232,13 +231,18 @@ body {
   background: #fff;
   z-index: 2;
   cursor: crosshair;
-  /* transition: width 0.2s ease; */
 }
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
   color: #a4363a;
   text-decoration: underline;
   cursor: crosshair;
+}
+.item:hover {
+  text-decoration: underline;
+}
+.item.is-active {
+  text-decoration: underline;
 }
 
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
@@ -636,8 +640,8 @@ body {
 
 .overlay-content {
   position: relative;
-  top: 25%;
   width: 100%;
+  height: 100%;
   text-align: center;
   margin-top: 30px;
 }
