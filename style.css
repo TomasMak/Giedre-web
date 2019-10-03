@@ -3,7 +3,6 @@
   src: url(/font/ParaSupreme-RegularNormal.otf);
 }
 * {
-  cursor: none;
   box-sizing: border-box !important;
   font: 14px/2 externalFont, sans-serif;
   font-weight: 400;
@@ -13,6 +12,7 @@
 html {
   overflow: hidden;
   height: 100%;
+  cursor: none;
 }
 
 body {
@@ -21,63 +21,6 @@ body {
   width: 100%;
   margin: 0;
 }
-
-.btn {
-  display: inline-block;
-  padding: 13px 20px;
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  background: transparent;
-  border: 1px solid #e1e1e1;
-  font: 12px/1.2 "Oswald", sans-serif;
-  letter-spacing: 0.4em;
-  text-align: center;
-  text-indent: 2px;
-  text-transform: uppercase;
-  transition: color 0.1s linear 0.05s;
-}
-
-.btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #e1e1e1;
-  z-index: 1;
-  opacity: 0;
-  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
-}
-
-.btn::after {
-  transition: border 0.1s linear 0.05s;
-}
-
-.btn .btn-inner {
-  position: relative;
-  z-index: 2;
-}
-
-.btn:hover {
-  color: #373737;
-  transition: color 0.1s linear 0s;
-}
-
-.btn:hover::before {
-  top: 0;
-  height: 100%;
-  opacity: 1;
-  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
-}
-
-.btn:hover::after {
-  border-color: #373737;
-  transition: border 0.1s linear 0s;
-}
-
 .slideshow {
   overflow: hidden;
   position: fixed;
@@ -172,14 +115,14 @@ body {
   align-items: center;
 }
 
-.slideshow .slide .title {
+/* .slideshow .slide .title {
   margin: 0 auto 15px;
   max-width: 1000px;
   font: 300 50px/1.2 "Oswald", sans-serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-}
-
+} */
+/* 
 .slideshow .slide .text {
   margin: 0 auto;
   max-width: 1000px;
@@ -190,13 +133,13 @@ body {
 .slideshow .slide .btn {
   margin: 15px 0 0;
   border-color: #fff;
-}
+} */
 
 .slideshow .pagination {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   text-align: left;
   padding: 60px 15px 15px 15px;
 }
@@ -231,7 +174,7 @@ body {
   width: 0;
   background: #fff;
   z-index: 2;
-  cursor: crosshair;
+  /* cursor: crosshair; */
 }
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
@@ -359,6 +302,53 @@ body {
   height: 100%;
   background: #fff;
 }
+/* Overlay page */
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #f2f2f2;
+  /* background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); */
+}
+
+.overlay, .overlay a:hover {
+  cursor: crosshair !important;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #a4363a;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay .closebtn {
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  font-size: 18px;
+  padding: 0px;
+}
+.overlay-content:hover {
+  cursor: crosshair
+}
+
+/* /////////////// */
 
 /* ------------------------------ Layout - 1 -------------------------  */
 
@@ -518,8 +508,6 @@ body {
   max-height: 100%;
   max-width: 80%;
 }
-
-/* /////////////// */
 
 /* Small devices */
 
@@ -709,50 +697,3 @@ body {
 
 @media only screen and (min-width: 1400px) {}
 
-/* Overlay page */
-
-.overlay {
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  background-color: #f2f2f2;
-  /* background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9); */
-}
-
-.overlay, .overlay a:hover {
-  cursor: crosshair !important;
-}
-
-.overlay-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #a4363a;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #a4363a;
-  /* cursor: crosshair !important */
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 30px;
-}
