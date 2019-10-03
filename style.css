@@ -12,6 +12,7 @@
 
 html {
   overflow: hidden;
+  height: 100%;
 }
 
 body {
@@ -297,7 +298,6 @@ body {
   top: 50%;
   left: 50%;
   background-color: transparent;
-  /* width: 180px; */
   color: #a4363a;
   font-size: 18px;
   font-weight: 400;
@@ -523,17 +523,11 @@ body {
 
 /* Small devices */
 
-@media only screen and (max-width: 992px) {
-  img {
-    object-fit: contain !important
-  }
-}
-
 /* laptops */
 
 @media only screen and (min-width: 992px) {}
 
-@media only screen and (max-width: 1095px) {
+@media only screen and (max-width: 600px) {
   img {
     object-fit: contain !important;
     height: auto;
@@ -604,10 +598,10 @@ body {
     margin-top: 5px;
     position: fixed;
     z-index: 3;
-    font-size: 48px;
+    font-size: 18px;
   }
   #mousemove {
-    font-size: 48px;
+    font-size: 18px;
   }
   .overlay {
     overflow: scroll;
@@ -621,6 +615,96 @@ body {
   }
 }
 
+@media screen and (max-width: 992px) and (min-width: 601px) {
+  img {
+    object-fit: contain !important
+  }
+  .content-container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    /* white-space: nowrap; */
+    /* margin-top: 300px; */
+  }
+  .style-1, .style-2, .style-3, .style-5 {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .style-1-right, .style-2-right, .style-5-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .style-1-img, .style-1-right-img, .style-2-img, .style-2-right-img, .style-5-img, .style-5-right-img {
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    margin: 0px auto;
+  }
+  .style-1-right-double-img {
+    width: 33%;
+    margin: 0px 30px;
+    /* margin: auto; */
+  }
+  .style-5 {
+    margin-left: 0;
+  }
+  .style-3-left {
+    height: 100%;
+    width: 31.3333%;
+    float: left;
+    margin-left: 3%;
+  }
+  
+  .style-3-middle {
+    height: 100%;
+    width: 31.3333%;
+    float: left;
+  }
+  
+  .style-3-right {
+    height: 100%;
+    width: 31.3333%;
+    float: left;
+    margin-right: 3%;
+  }
+  
+  .style-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .style-3 img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 75%;
+  }
+  .style-4 {
+    margin-left: 0px;
+  }
+  .style-4 img {
+    object-fit: contain;
+    max-height: 80%;
+    max-width: 90%;
+  }
+  #header {
+    margin-left: 15px;
+    margin-top: 5px;
+    position: fixed;
+    z-index: 3;
+    font-size: 18px;
+  }
+  #mousemove {
+    font-size: 18px;
+  }
+}
 /* Large laptops and dekstops */
 
 @media only screen and (min-width: 1400px) {}
