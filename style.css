@@ -1,10 +1,13 @@
 @font-face {
-  font-family: externalFont;
-  src: url(/font/ParaSupreme-RegularNormal.otf);
+  font-family: webfontkit;
+  /* src: url(/font/ParaSupreme-RegularNormal.otf); */
+  src: url(/webfontkit/parasupreme-regularnormal-webfont.eot) ;
+  src: url(/webfontkit/parasupreme-regularnormal-webfont.woff) ;
+  src: url(/webfontkit/parasupreme-regularnormal-webfont.ttf);
 }
 * {
   box-sizing: border-box !important;
-  font: 14px/2 externalFont, sans-serif;
+  font: 14px/2 webfontkit, sans-serif;
   font-weight: 400;
   color: #a4363a;
 }
