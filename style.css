@@ -167,12 +167,9 @@ p, a {
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
   color: #a4363a;
-  text-decoration: underline;
   cursor: crosshair;
 }
-.item:hover {
-  text-decoration: underline;
-}
+
 .item.is-active {
   text-decoration: underline;
 }
@@ -287,13 +284,12 @@ p, a {
 #subHeader {
   margin: 16px 0px 30px 0px;
 }
-.contact-link:hover {
-  text-decoration: underline;
-}
 .contacts-container {
   margin-bottom: 30px;
 }
-
+.break {
+  display: none;
+}
 .content-container {
   width: 100%;
   height: 100%;
@@ -508,7 +504,14 @@ p, a {
 
 /* laptops */
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+  .item:hover {
+    text-decoration: underline;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   img {
@@ -588,6 +591,9 @@ p, a {
   }
   .overlay {
     overflow: scroll;
+  }
+  .break {
+    display: block;
   }
   .pagination {
     padding-top: 50px !important;
