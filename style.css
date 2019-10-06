@@ -276,7 +276,7 @@ p, a {
   position: fixed;
   z-index: 3;
   font-size: 18px;
-  line-height: 35px;
+  line-height: 25px;
 }
 #header:hover {
   cursor: crosshair
@@ -586,6 +586,9 @@ p, a {
     z-index: 3;
     font-size: 18px;
   }
+  #subHeader {
+    margin-bottom: 20px;
+  }
   #mousemove {
     font-size: 18px;
   }
@@ -596,7 +599,7 @@ p, a {
     display: block;
   }
   .pagination {
-    padding-top: 50px !important;
+    padding-top: 30px !important;
   }
   .slideshow .pagination .item {
     padding: 10px 0px;
