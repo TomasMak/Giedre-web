@@ -108,20 +108,20 @@ headerName.onmouseout =
 	showMouseMove = () => {
 		customCursor.style.visibility = 'visible'
 	}
-arrowNext.onmouseover =
-	hideMouseMove = () => {
-		customCursor.style.visibility = 'hidden'
-	}
-arrowNext.onmouseout =
-	showMouseMove = () => {
-		customCursor.style.visibility = 'visible'
-	}
-arrowPrev.onmouseover =
-	hideMouseMove = () => {
-		customCursor.style.visibility = 'hidden'
-	}
-arrowPrev.onmouseout =
-	showMouseMove = () => {
-		customCursor.style.visibility = 'visible'
-	}
+// arrowNext.onmouseover =
+// 	hideMouseMove = () => {
+// 		customCursor.style.visibility = 'hidden'
+// 	}
+// arrowNext.onmouseout =
+// 	showMouseMove = () => {
+// 		customCursor.style.visibility = 'visible'
+// 	}
+// arrowPrev.onmouseover =
+// 	hideMouseMove = () => {
+// 		customCursor.style.visibility = 'hidden'
+// 	}
+// arrowPrev.onmouseout =
+// 	showMouseMove = () => {
+// 		customCursor.style.visibility = 'visible'
+// 	}
 

@@ -126,7 +126,6 @@ p, a {
 .slideshow .pagination {
   position: absolute;
   left: 0;
-  width: 100%;
   height: 50%;
   text-align: left;
   padding: 60px 15px 15px 15px;
@@ -315,8 +314,8 @@ p, a {
 }
 
 .overlay-content {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  /* width: 100%; */
   height: 100%;
   padding: 15px;
 }
@@ -326,6 +325,7 @@ p, a {
   color: #a4363a;
   display: block;
   transition: 0.3s;
+  max-width: 50%;
 }
 
 .overlay .closebtn {
