@@ -22,13 +22,12 @@ function plusDivs(project, n) {
 }
 function resetPriorGalleries(currentProject) {
 	let projectDivs = document.getElementsByClassName("projects");
-	for (let i = 0; i < projectDivs.length; i++) {
-		if (projectDivs[i].id === currentProject) {
-			return
-		} else {
-			showDivs(projectDivs[i].id, 1)
+	setTimeout(() => {
+		for (let i = 0; i < projectDivs.length; i++) {
+			if (projectDivs[i].id === currentProject) { return }
+			else { showDivs(projectDivs[i].id, 1) }
 		}
-	}
+	}, 500);
 }
 
 function showDivs(project, index) {
@@ -45,18 +44,16 @@ function showDivs(project, index) {
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
 		imgNames.push(elements[i].children[0].children[0].alt);
-		let mousemoveText = document.getElementById('mousemove').innerText;
-		console.log(mousemoveText)
 		if (index == elements.length) {
-			document.getElementById('mousemove').innerText = 'Scroll down'
+			document.getElementById('mousemove').style.display = 'none';
+			document.getElementById('mousemove-2').style.display = 'block';
 		}
 		else {
+			document.getElementById('mousemove').style.display = 'block';
+			document.getElementById('mousemove-2').style.display = 'none';
 			// document.getElementById('mousemove').innerText = imgNames[index - 1]
 		}
-		// document.getElementById(project).getElementsByClassName("img-name")[0].innerText = imgNames[index - 1];
-		// }
 	}
-	// document.getElementById('mousemove').innerText = imgNames[index - 1]
 
 }
 
@@ -70,6 +67,7 @@ var mousePos = new Thing(0, 0);
 
 mydiv = document.getElementById("body");
 mycanvas = document.getElementById("mousemove");
+mycanvas2 = document.getElementById("mousemove-2");
 
 mydiv.addEventListener('mousemove', function (event) {
 	mousePos.x = event.clientX;
@@ -77,7 +75,8 @@ mydiv.addEventListener('mousemove', function (event) {
 
 	mycanvas.style.top = mousePos.y + 1 + "px";
 	mycanvas.style.left = mousePos.x + "px";
-	// console.log(mycanvas.style.top);
+	mycanvas2.style.top = mousePos.y + 1 + "px";
+	mycanvas2.style.left = mousePos.x + "px";
 }, false);
 
 // Overlay page
