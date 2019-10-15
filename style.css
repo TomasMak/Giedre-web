@@ -237,6 +237,21 @@ p, a {
   margin-left: -12px;
   white-space: nowrap;
 }
+#mousemove-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  color: #a4363a;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 3000;
+  pointer-events: none;
+  margin-top: -27px;
+  margin-left: -12px;
+  white-space: nowrap;
+  display: none;
+}
 
 .projects {
   height: 100%;
