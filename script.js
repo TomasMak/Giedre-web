@@ -72,7 +72,7 @@ var slideshow = $('.main-content .slideshow');
 
 function slideshowSwitch(slideshow, index, auto) {
   if (slideshow.data('wait')) return;
-
+  
   var slides = slideshow.find('.slide');
   var pages = slideshow.find('.pagination');
   var activeSlide = slides.filter('.is-active');
@@ -82,7 +82,7 @@ function slideshowSwitch(slideshow, index, auto) {
   const newSlideImageName = newSlideImage[0].children[0].children[0].alt
   setTimeout(() => {
     document.getElementById('mousemove').innerText = newSlideImageName
-  }, 1000);
+  }, 1000); 
   var newSlideContent = newSlide.find('.slide-content');
   var newSlideElements = newSlide.find('.caption > *');
   if (newSlide.is(activeSlide)) return;

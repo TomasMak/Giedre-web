@@ -20,6 +20,16 @@ showDivs("project8", projectIndexes.project8);
 function plusDivs(project, n) {
 	showDivs(project, projectIndexes[project] += n);
 }
+function resetPriorGalleries(currentProject) {
+	let projectDivs = document.getElementsByClassName("projects");
+	for (let i = 0; i < projectDivs.length; i++) {
+		if (projectDivs[i].id === currentProject) {
+			return
+		} else {
+			showDivs(projectDivs[i].id, 1)
+		}
+	}
+}
 
 function showDivs(project, index) {
 	let i;
@@ -30,28 +40,23 @@ function showDivs(project, index) {
 		x[i].style.display = "none";
 	}
 	x[index - 1].style.display = "block";
-	// document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
-	// let text = document.getElementById(project).getElementsByClassName("pagination")[0].innerText = index + ' / ' + x.length;
 	projectIndexes[project] = index;
 	let elements = document.getElementById(project).querySelector('.imgslide').children;
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
-		// if (elements[i].src !== undefined) {
 		imgNames.push(elements[i].children[0].children[0].alt);
+		let mousemoveText = document.getElementById('mousemove').innerText;
+		console.log(mousemoveText)
+		if (index == elements.length) {
+			document.getElementById('mousemove').innerText = 'Scroll down'
+		}
+		else {
+			// document.getElementById('mousemove').innerText = imgNames[index - 1]
+		}
 		// document.getElementById(project).getElementsByClassName("img-name")[0].innerText = imgNames[index - 1];
 		// }
 	}
-	// console.log( imgNames[0])
-	document.getElementById('mousemove').innerText = imgNames[index - 1]
-	document.getElementById(project).onmouseover = function () { mouseOver() }
-	document.getElementById(project).onclick = function () { mouseOver() }
-	document.getElementById(project).onmouseout = function () { mouseOut() };
-	let prjct = document.getElementById(project)
-	function mouseOver() {
-	}
-
-	function mouseOut() {
-	}
+	// document.getElementById('mousemove').innerText = imgNames[index - 1]
 
 }
 
