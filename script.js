@@ -289,22 +289,6 @@ $(document).ready(function () {
     pages.eq(index).addClass('is-active');
   });
 
-  /* Lazyloading
-  $('.slideshow').each(function(){
-    var slideshow=$(this);
-    var images=slideshow.find('.image').not('.is-loaded');
-    images.on('loaded',function(){
-      var image=$(this);
-      var slide=image.closest('.slide');
-      slide.addClass('is-loaded');
-    });
-  */
-
-  // var timeout=setTimeout(function(){
-  //   slideshowNext(slideshow,false,true);
-  // },slideshowDuration);
-
-  // slideshow.data('timeout',timeout);
 });
 
 if ($('.main-content .slideshow').length > 1) {

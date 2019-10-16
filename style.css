@@ -236,6 +236,7 @@ p, a {
   margin-top: -27px;
   margin-left: -12px;
   white-space: nowrap;
+  text-shadow: none;
 }
 #mousemove-2 {
   position: fixed;
@@ -251,6 +252,7 @@ p, a {
   margin-left: -12px;
   white-space: nowrap;
   display: none;
+  text-shadow: none;
 }
 
 .projects {
@@ -346,7 +348,7 @@ p, a {
 
 .overlay a {
   text-decoration: none;
-  color: #a4363a;
+  color: #a4363a !important;
   display: block;
   transition: 0.3s;
   max-width: 50%;
