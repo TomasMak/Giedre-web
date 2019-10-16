@@ -236,6 +236,23 @@ p, a {
   margin-top: -27px;
   margin-left: -12px;
   white-space: nowrap;
+  text-shadow: none;
+}
+#mousemove-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  color: #a4363a;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 3000;
+  pointer-events: none;
+  margin-top: -27px;
+  margin-left: -12px;
+  white-space: nowrap;
+  display: none;
+  text-shadow: none;
 }
 #mousemove-2 {
   position: fixed;
@@ -346,7 +363,7 @@ p, a {
 
 .overlay a {
   text-decoration: none;
-  color: #a4363a;
+  color: #a4363a !important;
   display: block;
   transition: 0.3s;
   max-width: 50%;
