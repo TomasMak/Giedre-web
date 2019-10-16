@@ -1,6 +1,5 @@
 @font-face {
   font-family: webfontkit;
-  /* src: url(/font/ParaSupreme-RegularNormal.otf); */
   src: url(./webfontkit/parasupreme-regularnormal-webfont.eot);
   src: url(./webfontkit/parasupreme-regularnormal-webfont.woff);
   src: url(./webfontkit/parasupreme-regularnormal-webfont.ttf);
@@ -102,7 +101,6 @@ p, a {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .slideshow .slide .image {
@@ -147,7 +145,6 @@ p, a {
 }
 
 .slideshow .pagination .item::before {
-  /* content: "" attr(href) ""; */
   display: block;
   position: absolute;
   left: 10px;
@@ -164,7 +161,6 @@ p, a {
   width: 0;
   background: #fff;
   z-index: 2;
-  /* cursor: crosshair; */
 }
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
@@ -254,21 +250,6 @@ p, a {
   display: none;
   text-shadow: none;
 }
-#mousemove-2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background-color: transparent;
-  color: #a4363a;
-  font-size: 18px;
-  font-weight: 400;
-  z-index: 3000;
-  pointer-events: none;
-  margin-top: -27px;
-  margin-left: -12px;
-  white-space: nowrap;
-  display: none;
-}
 
 .projects {
   height: 100%;
@@ -282,17 +263,7 @@ p, a {
   background: #fff;
 }
 
-.prevv {
-  /* cursor: w-resize; */
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  left: 0;
-  top: 0;
-}
-
 .nextt {
-  /* cursor: e-resize; */
   position: absolute;
   height: 100%;
   width: 100%;
@@ -346,6 +317,7 @@ p, a {
   top: 0;
   left: 0;
   background-color: #f2f2f2;
+  overflow: scroll;
   /* background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9); */
 }
@@ -565,8 +537,6 @@ p, a {
     width: 100%;
     height: 100%;
     background: #fff;
-    /* white-space: nowrap; */
-    /* margin-top: 300px; */
   }
   .style-1, .style-2, .style-3, .style-5 {
     width: 100%;
@@ -593,7 +563,6 @@ p, a {
   .style-1-right-double-img {
     width: 33%;
     margin: 0px 30px;
-    /* margin: auto; */
   }
   .style-5 {
     margin-left: 0;
@@ -631,12 +600,6 @@ p, a {
   #subHeader {
     margin-bottom: 20px;
   }
-  #mousemove {
-    font-size: 18px;
-  }
-  .overlay {
-    overflow: scroll;
-  }
   .break {
     display: block;
   }
@@ -656,8 +619,6 @@ p, a {
     width: 100%;
     height: 100%;
     background: #fff;
-    /* white-space: nowrap; */
-    /* margin-top: 300px; */
   }
   .style-1, .style-2, .style-3, .style-5 {
     width: 50%;
@@ -683,7 +644,6 @@ p, a {
   .style-1-right-double-img {
     width: 33%;
     margin: 0px 30px;
-    /* margin: auto; */
   }
   .style-5 {
     margin-left: 0;
@@ -728,9 +688,6 @@ p, a {
     margin-top: 5px;
     position: fixed;
     z-index: 3;
-    font-size: 18px;
-  }
-  #mousemove {
     font-size: 18px;
   }
 }
