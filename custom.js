@@ -27,7 +27,7 @@ function resetPriorGalleries(currentProject) {
 			if (projectDivs[i].id === currentProject) { return }
 			else { showDivs(projectDivs[i].id, 1) }
 		}
-	}, 500);
+	}, 800);
 }
 
 function showDivs(project, index) {
@@ -43,7 +43,7 @@ function showDivs(project, index) {
 	let elements = document.getElementById(project).querySelector('.imgslide').children;
 	let imgNames = [];
 	for (let i = 0; i < elements.length; i++) {
-		imgNames.push(elements[i].children[0].children[0].alt);
+		// imgNames.push(elements[i].children[0].children[0].alt);
 		if (index == elements.length) {
 			document.getElementById('mousemove').style.display = 'none';
 			document.getElementById('mousemove-2').style.display = 'block';
