@@ -81,6 +81,7 @@ mydiv.addEventListener('mousemove', function (event) {
 
 const customCursor = document.getElementById('mousemove')
 const headerName = document.getElementById('header')
+const overlayHeaderName = document.getElementById('header-2')
 const arrowNext = document.getElementById('nextArrow')
 const arrowPrev = document.getElementById('prevArrow')
 const overlayPage = document.getElementById("myNav")
@@ -92,12 +93,16 @@ function openNav() {
 	overlayPage.style.display = "block"
 	customCursor.style.display = 'none'
 	mainBody.style.cursor = 'default'
+	headerName.style.display = 'none'
+	overlayHeaderName.style.display = 'block'
 }
 
 function closeNav() {
 	overlayPage.style.display = "none"
 	customCursor.style.display = 'block'
 	mainBody.style.cursor = 'none'
+	headerName.style.display = 'block'
+	overlayHeaderName.style.display = 'none'
 }
 
 // Image library 

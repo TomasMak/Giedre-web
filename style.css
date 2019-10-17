@@ -220,7 +220,7 @@ p, a {
 
 /* /////////////// */
 
-#mousemove {
+#mousemove, #mousemove-2 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -235,18 +235,6 @@ p, a {
   white-space: nowrap;
 }
 #mousemove-2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background-color: transparent;
-  color: #a4363a;
-  font-size: 18px;
-  font-weight: 400;
-  z-index: 3000;
-  pointer-events: none;
-  margin-top: -27px;
-  margin-left: -12px;
-  white-space: nowrap;
   display: none;
 }
 
@@ -274,16 +262,20 @@ p, a {
   visibility: hidden
 }
 
-#header {
-  margin-left: 15px;
-  margin-top: 5px;
+#header, #header-2 {
+  padding-left: 15px;
+  padding-top: 5px;
   position: fixed;
   z-index: 3;
   font-size: 18px;
   line-height: 25px;
 }
+#header-2 {
+  background-color: #f2f2f2;
+  display:none;
+}
 
-#header:hover {
+#header:hover, #header-2:hover {
   cursor: crosshair
 }
 
@@ -590,8 +582,6 @@ p, a {
     max-width: 90%;
   }
   #header {
-    margin-left: 15px;
-    margin-top: 5px;
     position: fixed;
     z-index: 3;
     font-size: 18px;
@@ -683,8 +673,6 @@ p, a {
     max-width: 90%;
   }
   #header {
-    margin-left: 15px;
-    margin-top: 5px;
     position: fixed;
     z-index: 3;
     font-size: 18px;
