@@ -30,6 +30,7 @@ body {
 p, a {
   margin: 0;
   padding: 0;
+  font-weight: 400 !important
 }
 
 .slideshow {
@@ -130,7 +131,7 @@ p, a {
   left: 0;
   height: 50%;
   text-align: left;
-  padding: 60px 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
 }
 
 .slideshow .pagination .item {
@@ -171,10 +172,12 @@ p, a {
 
 .item.is-active {
   text-decoration: underline;
+  opacity: .5;
 }
 
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
   cursor: crosshair;
+  opacity: .5;
 }
 
 .slideshow .arrows .arrow {
@@ -280,11 +283,14 @@ p, a {
 }
 
 #subHeader {
-  margin: 16px 0px 30px 0px;
+  margin: 16px 0px 0px 0px;
+}
+#headerSelectedWork {
+  margin: 80px 0px 0px 0px;
 }
 
 .contacts-container {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .break {
@@ -313,13 +319,13 @@ p, a {
   background-color: rgba(0, 0, 0, 0.9); */
 }
 
-.overlay, .overlay a:hover {
+.overlay a:hover {
   cursor: crosshair !important;
+  text-decoration: underline;
+  opacity: .5;
 }
 
 .overlay-content {
-  position: absolute;
-  /* width: 100%; */
   height: 100%;
   padding: 15px;
 }
@@ -327,7 +333,7 @@ p, a {
 .overlay a {
   text-decoration: none;
   color: #a4363a !important;
-  display: block;
+  display: inline-block;
   transition: 0.3s;
   max-width: 50%;
 }
@@ -593,7 +599,7 @@ p, a {
     display: block;
   }
   .pagination {
-    padding-top: 30px !important;
+    padding-top: 0px !important;
   }
   .slideshow .pagination .item {
     padding: 10px 0px;
