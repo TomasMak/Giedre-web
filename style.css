@@ -30,7 +30,8 @@ body {
 p, a {
   margin: 0;
   padding: 0;
-  font-weight: 400 !important
+  font-weight: 400 !important;
+  cursor: crosshair;
 }
 
 .slideshow {
@@ -139,7 +140,8 @@ p, a {
   position: relative;
   width: 100%;
   font-size: 18px;
-  white-space: normal
+  white-space: normal;
+  border-bottom: 1px solid transparent;
 }
 
 .slideshow .pagination .item+.page {
@@ -171,13 +173,12 @@ p, a {
 }
 
 .item.is-active {
-  text-decoration: underline;
-  opacity: .5;
+  border-bottom: 1px solid #a4363a !important;
 }
 
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
   cursor: crosshair;
-  opacity: .5;
+  border-bottom: 1px solid #a4363a !important;
 }
 
 .slideshow .arrows .arrow {
@@ -283,14 +284,14 @@ p, a {
 }
 
 #subHeader {
-  margin: 16px 0px 0px 0px;
+  margin: 16px 0px 30px 0px;
 }
 #headerSelectedWork {
   margin: 80px 0px 0px 0px;
 }
 
 .contacts-container {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .break {
@@ -321,8 +322,8 @@ p, a {
 
 .overlay a:hover {
   cursor: crosshair !important;
-  text-decoration: underline;
-  opacity: .5;
+  border-bottom: 1px solid #a4363a;
+  
 }
 
 .overlay-content {
@@ -335,15 +336,7 @@ p, a {
   color: #a4363a !important;
   display: inline-block;
   transition: 0.3s;
-  max-width: 50%;
-}
-
-.overlay .closebtn {
-  position: fixed;
-  top: 5px;
-  right: 15px;
-  font-size: 18px;
-  padding: 0px;
+  border-bottom: 1px solid transparent;
 }
 
 .overlay-content:hover {
@@ -517,10 +510,10 @@ p, a {
 
 @media only screen and (min-width: 992px) {
   .contact-link:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #a4363a;
   }
   .item:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #a4363a;
   }
 }
 
