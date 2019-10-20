@@ -141,7 +141,6 @@ p, a {
   width: 100%;
   font-size: 18px;
   white-space: normal;
-  border-bottom: 1px solid transparent;
 }
 
 .slideshow .pagination .item+.page {
@@ -173,12 +172,12 @@ p, a {
 }
 
 .item.is-active {
-  border-bottom: 1px solid #a4363a !important;
+  text-decoration: underline;
 }
 
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
   cursor: crosshair;
-  border-bottom: 1px solid #a4363a !important;
+  text-decoration: underline;
 }
 
 .slideshow .arrows .arrow {
@@ -322,8 +321,7 @@ p, a {
 
 .overlay a:hover {
   cursor: crosshair !important;
-  border-bottom: 1px solid #a4363a;
-  
+  text-decoration: underline;
 }
 
 .overlay-content {
@@ -336,7 +334,6 @@ p, a {
   color: #a4363a !important;
   display: inline-block;
   transition: 0.3s;
-  border-bottom: 1px solid transparent;
 }
 
 .overlay-content:hover {
@@ -510,10 +507,10 @@ p, a {
 
 @media only screen and (min-width: 992px) {
   .contact-link:hover {
-    border-bottom: 1px solid #a4363a;
+    text-decoration: underline;
   }
   .item:hover {
-    border-bottom: 1px solid #a4363a;
+    text-decoration: underline;
   }
 }
 
