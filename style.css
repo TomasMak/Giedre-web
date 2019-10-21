@@ -31,7 +31,7 @@ p, a {
   margin: 0;
   padding: 0;
   font-weight: 400 !important;
-  cursor: url(/images/dot.png), auto;
+  cursor: url(./images/dot.png), auto;
 }
 
 .slideshow {
@@ -154,7 +154,7 @@ p, a {
   width: 100%;
   height: 30px;
   color: #a4363a;
-  cursor: url(/images/dot.png), auto;
+  cursor: url(./images/dot.png), auto;
   text-align: left;
   /* background: rgba(255, 255, 255, 0.5); */
   /* transition: background 0.2s ease; */
@@ -168,7 +168,7 @@ p, a {
 
 .slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active:before {
   color: #a4363a;
-  cursor: url(/images/dot.png), auto;
+  cursor: url(./images/dot.png), auto;
 }
 
 .item.is-active {
@@ -176,7 +176,7 @@ p, a {
 }
 
 .item:hover, .item.is-active:hover, .item.is-active:before, .item::after, .item::before {
-  cursor: url(/images/dot.png), auto;
+  cursor: url(./images/dot.png), auto;
   text-decoration: underline;
 }
 
@@ -277,7 +277,7 @@ p, a {
 }
 
 #header:hover, #header-2:hover {
-  cursor: url(/images/dot.png), auto
+  cursor: url(./images/dot.png), auto
 }
 
 #subHeader {
@@ -318,7 +318,7 @@ p, a {
 }
 
 .overlay a:hover {
-  cursor: url(/images/dot.png), auto !important;
+  cursor: url(./images/dot.png), auto !important;
   text-decoration: underline;
 }
 
@@ -335,7 +335,7 @@ p, a {
 }
 
 .overlay-content:hover {
-  cursor: url(/images/dot.png), auto
+  cursor: url(./images/dot.png), auto
 }
 
 /* /////////////// */
