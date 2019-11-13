@@ -89,6 +89,18 @@ const mainBody = document.getElementById("body")
 
 customCursor.innerText = 'Lou&Charlene'
 
+document.getElementById('myNav').addEventListener("click", closeNav);
+document.getElementById('contact1').addEventListener("click", ignoreParentClick);
+document.getElementById('contact2').addEventListener("click", ignoreParentClick);
+document.getElementById('contact3').addEventListener("click", ignoreParentClick);
+document.getElementById('contact4').addEventListener("click", ignoreParentClick);
+document.getElementById('contact5').addEventListener("click", ignoreParentClick);
+document.getElementById('contact6').addEventListener("click", ignoreParentClick);
+document.getElementById('contact7').addEventListener("click", ignoreParentClick);
+
+function ignoreParentClick(event) {
+	event.stopPropagation();
+  }
 function openNav() {
 	overlayPage.style.display = "block"
 	customCursor.style.display = 'none'
@@ -96,7 +108,6 @@ function openNav() {
 	headerName.style.display = 'none'
 	overlayHeaderName.style.display = 'block'
 }
-
 function closeNav() {
 	overlayPage.style.display = "none"
 	customCursor.style.display = 'block'
