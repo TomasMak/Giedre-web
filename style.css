@@ -542,7 +542,7 @@ p, a {
 
 /* laptops */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .contact-link:hover {
     text-decoration: underline;
   }
@@ -634,7 +634,7 @@ p, a {
   }
 }
 
-@media screen and (max-width: 992px) and (min-width: 601px) {
+@media screen and (max-width: 1024px) and (min-width: 601px) {
   img {
     object-fit: contain !important
   }
