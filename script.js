@@ -264,22 +264,18 @@ $(document).ready(function () {
   });
   $('.nextt').on('click', function () {
     let lastImageInView = document.getElementById('mousemove-2').style.display == 'block'
-    if (lastImageInView && window.innerWidth > 1024) {
-      $('.slide').on('mousewheel DOMMouseScroll', function (event) {
-        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-        slideshowNext($(this).closest('.slideshow'), delta > 0);
-      });
-    }
-    if (lastImageInView && window.innerWidth <= 1024) {
-      $('.slide').on('swipedown swiperight', function () {
-        slideshowNext($(this).closest('.slideshow'), true);
-      });
-      $('.slide').on('swipeup swipeleft', function () {
-        slideshowNext($(this).closest('.slideshow'), false);
-      });
-    }
+    $('.slide').on('mousewheel DOMMouseScroll', function (event) {
+      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+      slideshowNext($(this).closest('.slideshow'), delta > 0);
+    });
+    $('.slide').on('swipedown swiperight', function () {
+      slideshowNext($(this).closest('.slideshow'), true);
+    });
+    $('.slide').on('swipeup swipeleft', function () {
+      slideshowNext($(this).closest('.slideshow'), false);
+    });
   });
-  
+
 
   $('.slideshow .pagination .item').on('click', function () {
     slideshowSwitch($(this).closest('.slideshow'), $(this).index());
