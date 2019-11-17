@@ -264,16 +264,18 @@ $(document).ready(function () {
   });
   $('.nextt').on('click', function () {
     let lastImageInView = document.getElementById('mousemove-2').style.display == 'block'
-    $('.slide').on('mousewheel DOMMouseScroll', function (event) {
-      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-      slideshowNext($(this).closest('.slideshow'), delta > 0);
-    });
-    $('.slide').on('swipedown swiperight', function () {
-      slideshowNext($(this).closest('.slideshow'), true);
-    });
-    $('.slide').on('swipeup swipeleft', function () {
-      slideshowNext($(this).closest('.slideshow'), false);
-    });
+    if(lastImageInView) {
+      $('.slide').on('mousewheel DOMMouseScroll', function (event) {
+        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        slideshowNext($(this).closest('.slideshow'), delta > 0);
+      });
+      $('.slide').on('swipedown swiperight', function () {
+        slideshowNext($(this).closest('.slideshow'), true);
+      });
+      $('.slide').on('swipeup swipeleft', function () {
+        slideshowNext($(this).closest('.slideshow'), false);
+      });
+    }
   });
 
 
