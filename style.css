@@ -138,7 +138,6 @@ p, a {
 .slideshow .pagination .item {
   display: block;
   position: relative;
-  width: 100%;
   font-size: 18px;
   white-space: normal;
 }
@@ -282,6 +281,7 @@ p, a {
 
 #subHeader {
   margin: 16px 0px 30px 0px;
+  display: inline-block;
 }
 #headerSelectedWork {
   margin: 30px 0px 0px 0px;
@@ -335,7 +335,7 @@ p, a {
 }
 
 .overlay-content:hover {
-  cursor: url(./images/cursor.svg), auto
+  cursor: url(./images/x.svg), auto
 }
 
 /* /////////////// */
