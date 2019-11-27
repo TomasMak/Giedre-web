@@ -68,8 +68,6 @@ $.each({
 // Slideshow
 var slideshowDuration = 4000;
 var slideshow = $('.main-content .slideshow');
-const test = document.getElementById('mousemove-2').style.display
-console
 
 function slideshowSwitch(slideshow, index, auto) {
   if (slideshow.data('wait')) return;

@@ -17,20 +17,15 @@ showDivs("project6", projectIndexes.project6);
 showDivs("project7", projectIndexes.project7);
 showDivs("project8", projectIndexes.project8);
 
+let stop = false 
+
 function plusDivs(project, n) {
 	showDivs(project, projectIndexes[project] += n);
-}
-function resetPriorGalleries(currentProject) {
-	let projectDivs = document.getElementsByClassName("projects");
-	setTimeout(() => {
-		for (let i = 0; i < projectDivs.length; i++) {
-			if (projectDivs[i].id === currentProject) { return }
-			else { showDivs(projectDivs[i].id, 1) }
-		}
-	}, 800);
+	stop = true
 }
 
-function showDivs(project, index) {
+
+function showDivs(project, index, stop) {
 	let i;
 	let x = document.getElementById(project).getElementsByClassName("slidess");
 	if (index > x.length) { index = 1 }
@@ -85,8 +80,8 @@ const headerName = document.getElementById('header')
 const overlayHeaderName = document.getElementById('header-2')
 const arrowNext = document.getElementById('nextArrow')
 const arrowPrev = document.getElementById('prevArrow')
-const overlayPage = document.getElementById("myNav")
-const mainBody = document.getElementById("body")
+const overlayPage = document.getElementById('myNav')
+const mainBody = document.getElementById('body')
 
 customCursor.innerText = 'Lou&Charlene'
 
@@ -101,12 +96,13 @@ document.getElementById('contact7').addEventListener("click", ignoreParentClick)
 document.getElementById('headerSelectedWork').addEventListener("click", ignoreParentClick);
 document.getElementById('subHeader').addEventListener("click", ignoreParentClick);
 
+
 function ignoreParentClick(event) {
 	event.stopPropagation();
-  }
+}
 function openNav() {
-	customCursor.style.display = 'none'
-	customCursorClose.style.display = 'none'
+	customCursor.style.zIndex = -1
+	customCursorClose.style.zIndex = -1
 	overlayPage.style.display = 'block'
 	mainBody.style.cursor = 'default'
 	headerName.style.display = 'none'
@@ -114,23 +110,46 @@ function openNav() {
 }
 function closeNav() {
 	overlayPage.style.display = 'none'
-	customCursor.style.display = 'block'
 	mainBody.style.cursor = 'none'
 	headerName.style.display = 'block'
 	overlayHeaderName.style.display = 'none'
+	customCursor.style.zIndex = 3000
+	customCursorClose.style.zIndex = 3000
+	stop = true
 }
+
+
+function resetPriorGalleries(currentProject) {
+	let projectDivs = document.getElementsByClassName("projects");
+	if(stop) {
+		return
+	} else {
+			setTimeout(() => {
+				for (let i = 0; i < projectDivs.length; i++) {
+					if (projectDivs[i].id === currentProject) { return }
+					else { showDivs(projectDivs[i].id, 1) }
+				}
+			}, 800);
+		}
+	}
+
 
 // Image library 
 
 headerName.onmouseover =
 	hideMouseMove = () => {
-		customCursor.style.visibility = 'hidden'
-		customCursorClose.style.visibility = 'hidden'
+		customCursor.style.zIndex = -1
+		customCursorClose.style.zIndex = -1
+	}
+overlayPage.onmouseover =
+	hideMouseMove = () => {
+		customCursor.style.zIndex = -1
+		customCursorClose.style.zIndex = -1
 	}
 headerName.onmouseout =
 	showMouseMove = () => {
-		customCursor.style.visibility = 'visible'
-		customCursorClose.style.visibility = 'visible'
+		customCursor.style.zIndex = 3000
+		customCursorClose.style.zIndex = 3000
 	}
 
 
