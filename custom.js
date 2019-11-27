@@ -21,7 +21,7 @@ let stop = false
 
 function plusDivs(project, n) {
 	showDivs(project, projectIndexes[project] += n);
-	stop = true
+	stop = false
 }
 
 
@@ -116,6 +116,9 @@ function closeNav() {
 	customCursor.style.zIndex = 3000
 	customCursorClose.style.zIndex = 3000
 	stop = true
+	setTimeout(() => {
+		stop = false
+	}, 500);
 }
 
 
