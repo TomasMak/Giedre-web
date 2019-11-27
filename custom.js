@@ -80,6 +80,7 @@ mydiv.addEventListener('mousemove', function (event) {
 // Overlay page
 
 const customCursor = document.getElementById('mousemove')
+const customCursorClose = document.getElementById('mousemove-2')
 const headerName = document.getElementById('header')
 const overlayHeaderName = document.getElementById('header-2')
 const arrowNext = document.getElementById('nextArrow')
@@ -97,19 +98,22 @@ document.getElementById('contact4').addEventListener("click", ignoreParentClick)
 document.getElementById('contact5').addEventListener("click", ignoreParentClick);
 document.getElementById('contact6').addEventListener("click", ignoreParentClick);
 document.getElementById('contact7').addEventListener("click", ignoreParentClick);
+document.getElementById('headerSelectedWork').addEventListener("click", ignoreParentClick);
+document.getElementById('subHeader').addEventListener("click", ignoreParentClick);
 
 function ignoreParentClick(event) {
 	event.stopPropagation();
   }
 function openNav() {
-	overlayPage.style.display = "block"
 	customCursor.style.display = 'none'
+	customCursorClose.style.display = 'none'
+	overlayPage.style.display = 'block'
 	mainBody.style.cursor = 'default'
 	headerName.style.display = 'none'
 	overlayHeaderName.style.display = 'block'
 }
 function closeNav() {
-	overlayPage.style.display = "none"
+	overlayPage.style.display = 'none'
 	customCursor.style.display = 'block'
 	mainBody.style.cursor = 'none'
 	headerName.style.display = 'block'
@@ -121,25 +125,12 @@ function closeNav() {
 headerName.onmouseover =
 	hideMouseMove = () => {
 		customCursor.style.visibility = 'hidden'
+		customCursorClose.style.visibility = 'hidden'
 	}
 headerName.onmouseout =
 	showMouseMove = () => {
 		customCursor.style.visibility = 'visible'
+		customCursorClose.style.visibility = 'visible'
 	}
-// arrowNext.onmouseover =
-// 	hideMouseMove = () => {
-// 		customCursor.style.visibility = 'hidden'
-// 	}
-// arrowNext.onmouseout =
-// 	showMouseMove = () => {
-// 		customCursor.style.visibility = 'visible'
-// 	}
-// arrowPrev.onmouseover =
-// 	hideMouseMove = () => {
-// 		customCursor.style.visibility = 'hidden'
-// 	}
-// arrowPrev.onmouseout =
-// 	showMouseMove = () => {
-// 		customCursor.style.visibility = 'visible'
-// 	}
+
 
